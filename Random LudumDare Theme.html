@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        const originalThemeList = [
+            "Delay the inevitable",
+            "Fragile",
+            "Make connections",
+            "Mutation",
+            "Teleportation",
+            "A single resource",
+            "Folklore",
+            "Shelter",
+            "Infestation",
+            "Road trip",
+            "Tunnels",
+            "Overgrown",
+            "Out of order",
+            "Space is limited",
+            "Combine",
+            "Garden",
+            "Sky pirates",
+            "Echoes",
+            "You are the power source",
+            "Crossroads",
+            "Repair",
+            "Branching out",
+            "Momentum",
+            "Strength in numbers",
+            "Decay",
+            "Treasure Map",
+            "Fill the void",
+            "Some assembly required",
+            "Playing both sides",
+            "One use only",
+            "Replication",
+            "Automation",
+            "Layers",
+            "Corruption",
+            "Color is a mechanic",
+            "Overflow",
+            "You control the environment, not the character",
+            "Leave something behind",
+            "Snowball effect",
+            "A faithful companion",
+            "Become the enemy",
+            "Read the manual",
+            "Outnumbered",
+            "One tool, many purposes",
+            "Clockwork",
+            "Parasite",
+            "Different every time",
+            "Mirror",
+            "Out of bounds",
+            "Unstable",
+            "Making connections",
+            "One tool, many uses",
+            "Decay",
+            "On / Off",
+            "Delay the inevitable",
+            "Keep your distance",
+            "Delivery",
+            "The environment changes you",
+            "Leave something behind",
+            "Everything changes at night",
+            "3 rules",
+            "Replication",
+            "Strength in numbers",
+            "Summoning",
+            "It follows you",
+            "One tool, many uses",
+            "Summoning",
+            "Delay the inevitable",
+            "Inconvenient superpowers",
+            "Rules can be broken",
+            "Delivery",
+            "Mutations",
+            "Witchcraft",
+            "Missing parts",
+            "Labyrinth",
+            "Ruins",
+            "Butterfly effect",
+            "Orbital",
+            "Making connections",
+            "The environment changes you",
+            "Out of order",
+            "The floor is lava",
+            "Keep your distance",
+            "Corruption",
+            "Switching perspectives",
+            "Replication",
+            "Decay",
+            "Leave something behind",
+            "Death is not the end",
+            "Everything changes at night",
+            "Reflection",
+            "Sanctuary",
+            "You are the power source",
+            "Cartography",
+            "Road trip",
+            "Control the environment",
+            "Mushrooms",
+            "First day on the job",
+            "Strength in numbers",
+            "On / Off",
+            "Ghost town",
+            "Symbiotic relationships",
+            "It follows you",
+            "Isolation",
+            "Automation",
+            "Teleportation",
+            "Momentum",
+            "Symmetry",
+            "3 rules",
+            "Dice",
+            "Parasite",
+            "Overflow",
+            "Unstable",
+            "Delivery",
+            "One time use",
+            "Momentum",
+            "Rain",
+            "Something is missing",
+            "Split in two",
+            "Fragile",
+            "Leave something behind",
+            "Expansion",
+            "Out of bounds",
+            "Instructions unclear",
+            "Shoot for the moon",
+            "Playing both sides",
+            "Clockwork",
+            "You are what you eat",
+            "Lost signal",
+            "Fragmentation",
+            "Automation",
+            "Generations",
+            "Containment",
+            "Feed the fire",
+            "Deeper and deeper",
+            "Supply lines",
+            "One tool, many uses",
+            "Equilibrium",
+            "Stick together",
+            "Symmetry",
+            "Perspectives",
+            "Garden",
+            "Corruption",
+            "Butterfly effect",
+            "Hivemind",
+            "Parasite",
+            "Choose your poison",
+            "Recycling",
+            "Reflections",
+            "Some assembly required",
+            "Shelter",
+            "Out of order",
+            "Overflow",
+            "Summoning",
+            "You are the power source",
+            "Duplication",
+            "You really shouldn't mix those",
+            "Public transport",
+            "Myths and legends",
+            "Hidden world",
+            "Never break the chain",
+            "Deeper and deeper",
+            "Leave something behind",
+            "Parasite",
+            "Shelter",
+            "Expansion",
+            "Hidden world",
+            "Delivery",
+            "You are the power source",
+            "Generations",
+            "One tool, many uses",
+            "Automation",
+            "Lost signal",
+            "One time use",
+            "Containment",
+            "Split in two",
+            "Summoning",
+            "Decay",
+            "Layers",
+            "Control the world, not the player",
+            "Nomad",
+            "Connections",
+            "Stuck in a loop",
+            "Feeding the monster",
+            "Delay the inevitable",
+            "Contain it",
+            "Day and night",
+            "Shipwrecked",
+            "Clockwork",
+            "You can't save them all",
+            "Death is not the end",
+            "Summoning",
+            "The world changes when you are not looking",
+            "Day and night",
+            "Decay",
+            "Overheat",
+            "Isolation",
+            "Death is not the end",
+            "Modular world",
+            "Make it grow",
+            "Shifting perspectives",
+            "Transportation",
+            "Summoning",
+            "Connections",
+            "Parasite",
+            "Technical difficulties",
+            "Magnetism",
+            "Explore the Unknown",
+            "Only 3 buttons",
+            "Feeding the monster",
+            "Contain it",
+            "Delay the inevitable",
+            "60 seconds to prepare",
+            "Wait are we the bad guys?",
+            "Strength in numbers",
+            "Mythology",
+            "Control the world, not the player",
+            "1 vs 100",
+            "Fragile",
+            "Mass production",
+            "The butterfly effect",
+            "Replaceable parts",
+            "Start with everything, end with nothing",
+            "Play against yourself",
+            "Two worlds",
+            "Nomad",
+            "Shipwrecked",
+            "Clockwork",
+            "You can't save them all",
+            "Layers",
+            "Reflection",
+            "Roll the dice",
+            "Four seasons",
+            "The world changes when you are not looking",
+            "Stuck in a loop",
+            "Door to anywhere",
+            "Automation",
+            "You're not supposed to be here",
+            "Lack of information",
+            "Mutation",
+            "Alchemy",
+            "Garden",
+            "Decay",
+            "Turn a violent genre non-violent",
+            "An ancient language",
+            "Butterfly effect",
+            "Déjà vu",
+            "1 minute to prepare",
+            "Fragile",
+            "You are the dungeon",
+            "Grow a tree",
+            "Side effects",
+            "Four elements",
+            "Your game has 3 rules, but only one is active at a time",
+            "You are the princess waiting to be rescued",
+            "Equilibrium",
+            "Dreams",
+            "Momentum",
+            "Sabotage",
+            "Echo",
+            "You are the power source",
+            "Tower offense",
+            "Mythology",
+            "Fragmentation",
+            "Turn a job into a game",
+            "Evolve",
+            "Replication",
+            "You can't save them all",
+            "Control two things at once",
+            "Stuck in the loop",
+            "Déjà vu",
+            "Multiple perspectives",
+            "Déjà vu",
+            "Outdated technology",
+            "Magnetism",
+            "Malfunction",
+            "Ruins",
+            "Connections",
+            "Automation",
+            "Keep it alive",
+            "Reflection",
+            "Planets",
+            "Seasons",
+            "An abandoned world",
+            "Protect the king",
+            "Shelter",
+            "Inconvenient superpowers",
+            "Delayed effects",
+            "Dreams",
+            "You are the power source",
+            "Turn a violent genre non-violent",
+            "An abandoned world",
+            "1 minute to prepare",
+            "Decay",
+            "Side effects",
+            "Fragile",
+            "Outdated technology",
+            "Ruins",
+            "Momentum",
+            "Automation",
+            "Keep it alive",
+            "Garden",
+            "Connections",
+            "Start with nothing",
+            "Unconventional travel",
+            "Side effects",
+            "Small character, big enemies",
+            "Factory",
+            "Shelter",
+            "One item, many uses",
+            "Night is coming",
+            "Making connections",
+            "Isolation",
+            "Duplication",
+            "Mutation",
+            "Low Tech",
+            "Take one, leave the rest",
+            "Evolve to survive",
+            "Unconventional travel",
+            "One rule",
+            "Merge",
+            "There is a spy among us",
+            "Games that shouldn't be in first person done in first person",
+            "Mutation",
+            "Decay",
+            "Making connections",
+            "Reduce, reuse, recycle",
+            "Rituals",
+            "Only 3 colors",
+            "Ancient mythology",
+            "Isolation",
+            "One item, many uses",
+            "Small character, big enemies",
+            "Evolve to survive",
+            "Low Tech",
+            "Extinction",
+            "Duplication",
+            "Take one, leave the rest",
+            "Fragile",
+            "Night is coming",
+            "Edge of the world",
+            "4 rooms",
+            "Generations",
+            "Build your weapon",
+            "Déjà vu",
+            "Every Input does two things",
+            "Reflections",
+            "Automation",
+            "Factory",
+            "Shelter",
+            "Start with nothing",
+            "Side effects",
+            "Take care of the egg",
+            "Overheating",
+            "Only downgrades",
+            "Alchemy",
+            "Hide",
+            "Colonization",
+            "Prisoner",
+            "Pollution",
+            "Leave something behind",
+            "You're not supposed to be here",
+            "Seasons"
+        ]
+
+        const themeList = []
+
+        originalThemeList.forEach(_theme => {
+            if (!themeList.some(_existingTheme => _existingTheme == _theme)) {
+                themeList.push(_theme)
+            }
+        })
+
+        console.log(`Total theme = ${themeList.length}`)
+
+
+        function getRandomNumber(_max) {
+            return Math.floor(Math.random() * (_max + 1))
+        }
+
+        function getRandomTheme(_count = 1) {
+            const result = [];
+
+            for (let i = 0; i < _count; i++) {
+                let randomTheme
+                console.log(`Count : ${i}`)
+
+                while (randomTheme == undefined || result.some(_aaaa => _aaaa == randomTheme)) {
+                    const randomNumber = getRandomNumber(themeList.length - 1)
+                    randomTheme = themeList[randomNumber]
+                    console.log(`Random number: ${randomNumber}`)
+                    console.log(`Random theme: ${randomTheme}`)
+                }
+
+                result.push(randomTheme)
+            }
+
+            return result;
+        }
+
+        function createNewTheme() {
+            const container = document.getElementById("theme_list")
+            const newLine = document.createElement("li")
+
+            getRandomTheme(2).forEach(_theme => {
+                const newTheme = document.createElement("span")
+                newTheme.innerHTML = _theme
+                newLine.append(newTheme)
+            })
+
+            container.append(newLine)
+        }
+    </script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            font-size: 1.5em;
+        }
+
+        #theme_list {
+            flex: 1 1 0;
+            overflow: auto;
+            padding: 0;
+        }
+
+        #theme_list>li {
+            padding: 0;
+            line-height: 2em;
+            list-style: none;
+        }
+
+        #theme_list>li:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        #theme_list>li>span {
+            background: rgb(230, 230, 230);
+            padding: 0.25em;
+            border: 1px solid rgb(210, 210, 210);
+            border-radius: 0.5em;
+            margin-left: 0.25em;
+        }
+
+        button {
+            flex: 0 0 auto;
+            font-size: 1em;
+            padding: 0.5em;
+            border: none;
+            background: rgb(40, 75, 75);
+            color: white;
+            font-weight: bold;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background: rgb(60, 100, 100)
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="theme_list">
+    </ul>
+    <button onclick="createNewTheme()">
+        Get new themes
+    </button>
+</body>
+
+</html>
