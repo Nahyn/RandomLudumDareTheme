@@ -1,0 +1,68 @@
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+#theme_list {
+    flex: 1 1 0;
+    overflow: auto;
+    padding: 0;
+}
+
+#theme_list>* {
+    display: flex;
+    padding: 0.25em 0;
+    flex-wrap: wrap;
+    line-height: 1.25em;
+    list-style: none;
+    justify-content: center;
+}
+
+#theme_list>*:not(:last-child) {
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1)
+}
+
+#theme_list>*:first-child:not(:last-child) {
+    display: none;
+}
+
+#theme_list>*:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#theme_list>*>span {
+    background: rgb(230, 230, 230);
+    padding: 0.25em;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 0.5em;
+    margin-left: 0.25em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#button_container {
+    flex: 0 0 auto;
+    display: flex;
+}
+
+button {
+    flex: 1 1 0;
+    font-size: 1em;
+    padding: 0.5em;
+    border: none;
+    background: rgb(40, 75, 75);
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+    background: rgb(60, 100, 100)
+}
