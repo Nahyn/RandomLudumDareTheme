@@ -934,8 +934,119 @@ const originalThemeList = [
 	"Advancing technology",
 	"Small world",
 	"You are the projectile",
-	"Afterlife"
+	"Afterlife",
+
+	// 51
+	"Every 10 seconds",
+	"Use it or lose it",
+	"Parasite",
+	"Split",
+	"Mutations",
+	"Corruption",
+	"Keep it moving",
+	"Harvest",
+	"Side effect",
+	"Nothing is permanent",
+	"Overgrown",
+	"Ascend",
+	"Duplication",
+	"Shelter",
+	"Making connections",
+	"You shouldn't mix those",
+
+	// 52 
+	"Salvage",
+	"Harvest",
+	"Layers",
+	"Companion",
+	"Connections",
+	"Keep it contained",
+	"Summoning",
+	"Expand",
+	"Delivery",
+	"Limited visibility",
+	"Combine",
+	"The other side",
+	"Side effects",
+	"Cartography",
+	"Extraction",
+	"Pathways",
+
+	//53
+	"Delivery",
+	"Cartography",
+	"Shelter",
+	"Leave something behind",
+	"Parasite",
+	"The wrong tool for the job",
+	"Ascend",
+	"Your health bar is more than just a health bar",
+	"Salvage",
+	"Strange machines",
+	"Signal",
+	"Limited visibility",
+	"It spreads",
+	"Clear a path",
+	"Every input does two things",
+	"Start small",
+
+	// 54
+	"Shelter",
+	"Break the cycle",
+	"Underground",
+	"Strange machines",
+	"Paths",
+	"Signal",
+	"Folklore",
+	"Overgrown",
+	"Sanctuary",
+	"Salvage",
+	"Reflect",
+	"Locks and keys",
+	"Keep the light on",
+	"Tiny Creatures",
+	"Limited space",
+	"Absorb",
+
+	// 55
+	"Summoning",
+	"It spreads",
+	"Recycle",
+	"Tunnels",
+	"Strange machines",
+	"Single use",
+	"Strength in numbers",
+	"Fishing",
+	"Push your luck",
+	"Digging",
+	"Cartography",
+	"Pick your poison",
+	"Decay",
+	"Collapse",
+	"Mutation",
+	"You don't play as the main character",
+
+	// 56
+	"Reflection",
+	"Absorb",
+	"You are not supposed to be here",
+	"Playing with fire",
+	"Tiny creatures",
+	"Under pressure",
+	"Mutation",
+	"Side effects",
+	"Salvage",
+	"Shelter",
+	"Isolation",
+	"Pathways",
+	"Descend",
+	"Lost signal",
+	"Connections",
+	"Strange machines",
+	"Ruins",
+	"Break the cycle",
 ]
+const editions_collected = [37, 56]
 
 const themeList = []
 
@@ -989,7 +1100,7 @@ function clearThemes() {
 	document.getElementById("theme_list").innerHTML = '';
 
 	const themeCountElement = document.createElement("div")
-	themeCountElement.innerHTML = `Total theme list: ${themeList.length} theme(s) (themes Ludum Dare [37, 50])`
+	themeCountElement.innerHTML = `Total theme list: ${themeList.length} theme(s) (themes Ludum Dare [${editions_collected.join(", ")}])`
 	addListElement(themeCountElement)
 }
 
