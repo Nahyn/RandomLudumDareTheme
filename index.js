@@ -1356,7 +1356,7 @@ function clearThemes() {
 	document.getElementById("theme_list").innerHTML = '';
 
 	const themeCountElement = document.createElement("div")
-	themeCountElement.innerHTML = `Total theme list: ${themeList.length} theme(s) (themes Ludum Dare [${editions_collected.join(", ")}])`
+	themeCountElement.innerHTML = `Total theme list: ${themeList.length} distinct themes (from Ludum Dare [${editions_collected.join(", ")}])`
 	addListElement(themeCountElement)
 }
 
