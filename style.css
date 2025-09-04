@@ -5,6 +5,7 @@ body {
     flex-direction: column;
     padding: 0;
     font-size: 1.2em;
+    background: rgb(60, 60, 60);
 }
 
 #theme_list {
@@ -35,7 +36,7 @@ body {
 }
 
 #theme_list>*>span {
-    background: rgb(230, 230, 230);
+    background: rgba(150, 150, 150, 0.8);
     padding: 0.25em;
     border: 1px solid rgb(210, 210, 210);
     border-radius: 0.5em;
@@ -57,7 +58,7 @@ button {
     font-size: 1em;
     padding: 0.5em;
     border: none;
-    background: rgb(40, 75, 75);
+    background: rgb(50, 134, 134);
     color: white;
     font-weight: bold;
 }
@@ -65,4 +66,5 @@ button {
 button:hover {
     cursor: pointer;
     background: rgb(60, 100, 100)
+
 }
